@@ -4,8 +4,8 @@ services:
   postgres:
     image: postgres:latest
     environment:
-      - POSTGRES_USER=userpostgres
-      - POSTGRES_PASSWORD=pwpostgres
+      - POSTGRES_USER=userpostgres # Register - Server Bölümünde Username  Kısmı için
+      - POSTGRES_PASSWORD=pwpostgres # Register - Server Bölümünde Password Kısmı için
     ports:
       - "5432:5432"
     volumes:
