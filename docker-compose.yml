@@ -3,6 +3,7 @@ version: "3.9"
 services:
   postgres:
     image: postgres:latest
+    container_name: PostgreSQL
     environment:
       - POSTGRES_USER=userpostgres # Register - Server Bölümünde Username  Kısmı için
       - POSTGRES_PASSWORD=pwpostgres # Register - Server Bölümünde Password Kısmı için
@@ -13,6 +14,7 @@ services:
 
   pg-admin:
     image: dpage/pgadmin4:latest
+    container_name: pgAdmin4
     environment:
       - PGADMIN_DEFAULT_EMAIL=name@mail.com # Burası pgAdmin sayfasında ki kullanıcı adınız olacak.
       - PGADMIN_DEFAULT_PASSWORD=admin #Burası pgAdmin sayfasında ki kullanıcı parolanız olacak.
