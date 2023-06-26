@@ -11,6 +11,7 @@ services:
       - "5432:5432"
     volumes:
       - ./sqldata:/var/lib/postgresql/data
+    restart: unless-stopped
 
   pg-admin:
     image: dpage/pgadmin4:latest
@@ -22,6 +23,7 @@ services:
 
     ports:
       - "5050:5050"
+    restart: always
 
 volumes:
   sqldata:
